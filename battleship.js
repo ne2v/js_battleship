@@ -1,13 +1,18 @@
 function battleship1() {
-var location1=1, location2=2, location3=3; //ship's coordinates
+var location1=Math.floor(Math.random()*5); 
+var location2=location1+1; 
+var location3=location2+1; //ship's coordinates
 //window.alert("tro lolo "+location2);
 var guess=-1 //current houp number
 var hits=0; // hits counter
 var guesses =0; //total guesses counter
 var isSunk =false; //
+window.alert("Ship's loation is :"+location1+"; "+location2+"; "+location3+". ");
 while (isSunk!=true) {
 while(guess<0 || guess>6){
-	guess=window.prompt("Enter your coordinates btw 0 and 6: ");
+	//guess=window.prompt("Enter your coordinates btw 0 and 6: ");
+	guess=Math.floor(Math.random()*7);
+	window.alert("Your shooting coordinates is: "+guess);
 	if (guess<0 || guess>6 ) {
 		window.alert("try againg "+guess+" is wrong");
 	}
